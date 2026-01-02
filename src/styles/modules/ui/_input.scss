@@ -1,0 +1,58 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as ui;
+
+/* =========================
+  INPUTS
+========================= */
+
+/* DEFAULT */
+.input {
+  @include ui.ui-control();
+  display: flex;
+  height: $ui-height;
+  align-items: center;
+  gap: 1rem;
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+/* COMPLEX */
+.search-bar {
+  @include ui.ui-control($padding: 0.25rem 0.25rem 0.25rem 1.5rem);
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+
+  &:focus-within {
+    border-color: $primary;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $secondary;
+    flex-shrink: 0;
+
+    @include ui.mask-icon("../assets/icons/shapes/location.svg");
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+  }
+}
+
+/* SEARCH BAR - EXAMPLE
+    <div class="search-bar">
+        <span class="search-bar__icon"></span>
+        <input type="text" class="search-bar__input" placeholder="Search for the location you want!">
+        <button class="btn btn--filled btn--base btn--chevron-right">Search</button>
+    </div>
+*/
+

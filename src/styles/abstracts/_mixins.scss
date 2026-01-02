@@ -1,0 +1,67 @@
+@use './variables' as *;
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin respond-max($break) {
+  @media (max-width: $break) {
+    @content;
+  }
+}
+
+@mixin ui-control(
+  $width: $ui-width,
+  $height: null,
+  $padding: $ui-padding,
+  $radius: $ui-radius,
+  $border-color: $gray-100
+) {
+  width: $width;
+  @if $height != null {
+    height: $height;
+  }
+  padding: $padding;
+  border-radius: $radius;
+  border: 1px solid $border-color;
+  background: $color-white;
+  font-weight: $font-medium;
+}
+
+@mixin mask-icon($path) {
+  -webkit-mask: url($path) no-repeat center / contain;
+  mask: url($path) no-repeat center / contain;
+}
+
+@mixin hidden-input() {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+@mixin icon-mask($path, $image: false) {
+  @if $image {
+    -webkit-mask-image: url($path);
+    mask-image: url($path);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  } @else {
+    -webkit-mask: url($path) no-repeat center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask: url($path) no-repeat center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-mode: alpha;
+  }
+}

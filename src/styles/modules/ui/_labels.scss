@@ -1,0 +1,55 @@
+@use "../../abstracts/variables" as *;
+
+/* =========================
+  LABEL
+========================= */
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: $font-medium;
+  line-height: normal;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  // Variantes
+  &--danger {
+    background-color: $danger-light;
+    color: $danger;
+    &::before {
+      -webkit-mask-image: url("../assets/icons/shapes/fire.svg");
+      mask-image: url("../assets/icons/shapes/fire.svg");
+    }
+  }
+
+  &--info {
+    background-color: $info-light;
+    color: $info;
+    &::before {
+      -webkit-mask-image: url("../assets/icons/shapes/house.svg");
+      mask-image: url("../assets/icons/shapes/house.svg");
+    }
+  }
+
+  &--success {
+    background-color: $primary-light;
+    color: $primary;
+    &::before {
+      -webkit-mask-image: url("../assets/icons/shapes/wallet.svg");
+      mask-image: url("../assets/icons/shapes/wallet.svg");
+    }
+  }
+}

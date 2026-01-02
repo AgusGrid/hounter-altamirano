@@ -1,0 +1,668 @@
+@charset "UTF-8";
+/* =========================
+  FONTS
+========================= */
+/* =========================
+  COLORS
+========================= */
+/* MONOCHROME */
+/* BRAND */
+/* FEEDBACK */
+/* =========================
+  UI LAYOUT VARIABLES
+========================= */
+/* Box sizing and core defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Make images and media scalable */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve default form styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove list styles where not needed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Anchor defaults */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Typography sensible defaults */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Accessible focus outlines */
+:focus {
+  outline: 2px solid #2563eb; /* blue-600 */
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1,
+.heading-1 {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h2,
+.heading-2 {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h3,
+.heading-3 {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h4,
+.heading-4 {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* =========================
+   BODY
+========================= */
+.body-text {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.body-text--medium {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.body-text--semibold {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* =========================
+   LABEL
+========================= */
+.label {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.label--small {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.label--medium {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.label--semibold {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #1b1c57;
+}
+
+body {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #1b1c57;
+}
+
+/* =========================
+  BUTTONS
+========================= */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+  border-radius: 6.25rem;
+  cursor: pointer;
+}
+
+/* =========================
+  TYPES
+========================= */
+.btn--filled {
+  color: #ffffff;
+}
+
+.btn--outlined {
+  background: #ffffff;
+}
+
+/* =========================
+  FILLED VARIANTS
+========================= */
+.btn--filled.btn--base {
+  background: #10b981;
+  border: 1px solid #10b981;
+}
+
+.btn--filled.btn--dark {
+  background: #0b9567;
+  border: 1px solid #0b9567;
+}
+
+/* =========================
+  OUTLINED VARIANTS
+========================= */
+.btn--outlined.btn--base {
+  background: #ffffff;
+  border: 1px solid #0b9567;
+  color: #0b9567;
+}
+
+.btn--outlined.btn--soft {
+  background: #d1fae5;
+  border: 1px solid #0b9567;
+  color: #0b9567;
+}
+
+.btn--outlined.btn--soft-full {
+  background: #d1fae5;
+  border: none;
+  color: #10b981;
+}
+
+/* =========================
+  ICON VARIANTS
+========================= */
+/* CHEVRON ">" */
+.btn--chevron-right::after,
+.btn--chevron-left::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask-image: url("../assets/icons/chevron-right.svg");
+  mask-image: url("../assets/icons/chevron-right.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* POSICIÓN */
+.btn--chevron-right::after {
+  margin-left: 0.5rem;
+}
+
+.btn--chevron-left::before {
+  margin-right: 0.5rem;
+}
+
+/* =========================
+  SMALL BUTTON (ICON ONLY)
+========================= */
+.btn--sm {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn--sm::after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask: url("../assets/icons/chevron-right.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask: url("../assets/icons/chevron-right.svg") no-repeat center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-mode: alpha;
+}
+
+/* =========================
+  NAVBAR BUTTON
+========================= */
+.btn--navbar {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.btn--navbar-dropdown::after {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: currentColor;
+  -webkit-mask: url("../../../assets/icons/chevron-down.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask: url("../../../assets/icons/chevron-down.svg") no-repeat center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-mode: alpha;
+  transition: transform 0.2s ease;
+}
+
+.btn--navbar-dropdown.is-open::after {
+  -webkit-mask: url("../../../assets/icons/chevron-up.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask: url("../../../assets/icons/chevron-up.svg") no-repeat center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-mode: alpha;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(0.98);
+  transition: all 0.2s ease;
+}
+
+/* =========================
+  INPUTS
+========================= */
+/* DEFAULT */
+.input {
+  width: 31rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.75rem;
+  border: 1px solid #e0e3eb;
+  background: #ffffff;
+  font-weight: 500;
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+  gap: 1rem;
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+/* COMPLEX */
+.search-bar {
+  width: 31rem;
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+  border-radius: 1.75rem;
+  border: 1px solid #e0e3eb;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+.search-bar:focus-within {
+  border-color: #10b981;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.search-bar__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #f59e0b;
+  flex-shrink: 0;
+  -webkit-mask: url("../assets/icons/shapes/location.svg") no-repeat center/contain;
+  mask: url("../assets/icons/shapes/location.svg") no-repeat center/contain;
+}
+.search-bar__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+/* SEARCH BAR - EXAMPLE
+    <div class="search-bar">
+        <span class="search-bar__icon"></span>
+        <input type="text" class="search-bar__input" placeholder="Search for the location you want!">
+        <button class="btn btn--filled btn--base btn--chevron-right">Search</button>
+    </div>
+*/
+/* =========================
+  SELECT — DEFAULT
+========================= */
+.custom-select {
+  font-family: Lexend, system-ui;
+  width: 31rem;
+  position: relative;
+  font-weight: 500;
+  z-index: 1001;
+}
+.custom-select .select-trigger {
+  width: 31rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.75rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+.custom-select .chevron {
+  transition: transform 0.3s ease;
+}
+.custom-select.open .chevron {
+  transform: rotate(180deg);
+}
+.custom-select {
+  /* DROPDOWN */
+}
+.custom-select .select-list {
+  transform: translateY(-2.2rem);
+  font-family: inherit;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  border-radius: 0 0 1.75rem 1.75rem;
+  list-style: none;
+  display: none;
+  z-index: 1;
+}
+.custom-select .select-list li:first-child {
+  margin-top: 1rem;
+}
+.custom-select .select-list li {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.custom-select .select-list li.selected {
+  background: #d1fae5;
+  font-weight: 500;
+}
+.custom-select.open .select-list {
+  display: block;
+}
+
+/* =========================
+  SELECT — SMALL VARIANT
+========================= */
+.custom-select--sm {
+  font-family: Lexend;
+}
+.custom-select--sm .select-trigger {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  width: 9.25rem;
+  height: 2.125rem;
+  border-radius: 6.25rem;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+}
+.custom-select--sm .select-list {
+  font-family: inherit;
+  width: 9.25rem;
+  min-width: 9.25rem;
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  padding: 0.25rem 0;
+  transform: translateY(-2rem);
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box;
+}
+.custom-select--sm .select-list li {
+  padding: 0.2rem 0.4rem;
+  margin: 0.5rem;
+  font-size: 0.875rem;
+}
+.custom-select--sm .select-list li:hover {
+  background: rgba(16, 185, 129, 0.1);
+  opacity: 0.5;
+}
+.custom-select--sm .select-list li.selected {
+  background: #10b981;
+}
+.custom-select--sm .select-list li.selected:hover {
+  opacity: 0.5;
+  color: white;
+}
+
+/* =========================
+  LABEL
+========================= */
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+.label--danger {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+.label--danger::before {
+  -webkit-mask-image: url("../assets/icons/shapes/fire.svg");
+  mask-image: url("../assets/icons/shapes/fire.svg");
+}
+.label--info {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+.label--info::before {
+  -webkit-mask-image: url("../assets/icons/shapes/house.svg");
+  mask-image: url("../assets/icons/shapes/house.svg");
+}
+.label--success {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+.label--success::before {
+  -webkit-mask-image: url("../assets/icons/shapes/wallet.svg");
+  mask-image: url("../assets/icons/shapes/wallet.svg");
+}
+
+/* =========================
+  CHECKBOX
+========================= */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 0.5rem;
+}
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.custom-checkbox__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #888b97;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.custom-checkbox__box::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffffff;
+  -webkit-mask: url("../assets/icons/feedback/check.svg") no-repeat center/contain;
+  mask: url("../assets/icons/feedback/check.svg") no-repeat center/contain;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.2s ease;
+}
+.custom-checkbox__label-text {
+  color: #626687;
+  font-size: 1rem;
+}
+.custom-checkbox__input:checked + .custom-checkbox__box {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+.custom-checkbox__input:checked + .custom-checkbox__box::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =========================
+  TEXTAREA
+========================= */
+.textarea {
+  width: 31rem;
+  height: 9rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.75rem;
+  border: 1px solid #e0e3eb;
+  background: #ffffff;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: #e0e3eb;
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */
