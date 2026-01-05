@@ -14,7 +14,87 @@
     />
 
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="./js/custom-select.js" defer></script>
+    <script src="main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <img
+          alt="logo-hounter"
+          aria-label="logo"
+          src="./assets/icons/logo.svg"
+        />
+      </div>
+
+      <div class="header-right">
+        <div class="nav-coordinates">
+          <button class="btn btn--outlined btn--nav">About Us</button>
+          <button class="btn btn--outlined btn--nav">Article</button>
+
+          <div class="custom-select custom-select--sm">
+            <button
+              class="select-trigger"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="select-value">Property</span>
+              <span class="chevron" aria-hidden="true">
+                <svg
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L7 7L13 1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <ul class="select-list" role="listbox" aria-label="Property">
+              <li data-value="house" class="selected">House</li>
+              <li data-value="apartment">Apartment</li>
+              <li data-value="loft">Loft</li>
+            </ul>
+          </div>
+
+          <button class="btn btn--outlined btn--soft">Sign up</button>
+
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="./assets/icons/burger.svg" alt="Hamburger menu" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="hero">
+          <div class="hero-left">Hero 1</div>
+          <div class="hero-right">
+            <img
+              class="main-img"
+              src="./assets/images/banner.png"
+              alt="Banner"
+            />
+            <div class="coordinates-wrapper">
+              <img
+                src="./assets/images/over-banner.png"
+                alt="House overlay"
+                class="aux"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="featured-house">Featured-house</section>
+      </div>
+    </main>
+  </body>
 </html>

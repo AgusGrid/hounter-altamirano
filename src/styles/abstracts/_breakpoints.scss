@@ -1,4 +1,25 @@
-$bp-large: 78.15em; // 1250px
-$bp-medium: 61.25em; // 980px
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 500px
+@use 'sass:map';
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin breakpoint($name, $direction: up) {
+  $value: map.get($breakpoints, $name);
+
+  @if $direction == up {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else if $direction == down {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @error "Invalid direction `#{$direction}` for breakpoint mixin. Use 'up' or 'down'.";
+  }
+}

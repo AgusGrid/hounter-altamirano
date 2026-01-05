@@ -2,7 +2,11 @@
   FONTS
 ========================= */
 
-$font-primary: "Lexend", system-ui, -apple-system, BlinkMacSystemFont,
+$font-primary:
+  'Lexend',
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
   sans-serif;
 
 $font-light: 300;
@@ -43,6 +47,10 @@ $info-light: #dbeafe;
 /* =========================
   UI LAYOUT VARIABLES
 ========================= */
+
+$margin-left-global: 15%;
+$house-inner-padding: 15%;
+$header-top-offset: 2rem;
 
 $ui-width: 31rem;
 $ui-height: 3.5rem;
