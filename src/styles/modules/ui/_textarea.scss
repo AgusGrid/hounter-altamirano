@@ -1,0 +1,17 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as ui;
+
+/* =========================
+  TEXTAREA
+========================= */
+
+.textarea {
+  @include ui.ui-control($height: $textarea-height);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: $gray-100;
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,56 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as ui;
+
+/* =========================
+  CHECKBOX
+========================= */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 0.5rem;
+
+  &__input {
+    @include ui.hidden-input();
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid $gray-300;
+    border-radius: 0.25rem;
+    background-color: $color-white;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    &::after {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      background-color: $color-white;
+      @include ui.mask-icon("../assets/icons/feedback/check.svg");
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.2s ease;
+    }
+  }
+
+  &__label-text {
+    color: $gray-500;
+    font-size: 1rem;
+  }
+
+  &__input:checked + &__box {
+    background-color: $primary;
+    border-color: $primary;
+
+    &::after {
+      opacity: 1; // Muestra el icono
+      transform: scale(1);
+    }
+  }
+}

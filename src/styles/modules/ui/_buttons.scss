@@ -1,0 +1,145 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+/* =========================
+  BUTTONS
+========================= */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+
+  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+  border-radius: 6.25rem;
+  cursor: pointer;
+}
+
+/* =========================
+  TYPES
+========================= */
+
+.btn--filled {
+  color: $color-white;
+}
+
+.btn--outlined {
+  background: $color-white;
+}
+
+/* =========================
+  FILLED VARIANTS
+========================= */
+
+.btn--filled.btn--base {
+  background: $primary;
+  border: 1px solid $primary;
+}
+
+.btn--filled.btn--dark {
+  background: $primary-dark;
+  border: 1px solid $primary-dark;
+}
+
+/* =========================
+  OUTLINED VARIANTS
+========================= */
+
+.btn--outlined.btn--base {
+  background: $color-white;
+  border: 1px solid $primary-dark;
+  color: $primary-dark;
+}
+
+.btn--outlined.btn--soft {
+  background: $primary-light;
+  border: 1px solid $primary-dark;
+  color: $primary-dark;
+}
+
+.btn--outlined.btn--soft-full {
+  background: $primary-light;
+  border: none;
+  color: $primary;
+}
+
+/* =========================
+  ICON VARIANTS
+========================= */
+
+/* CHEVRON ">" */
+.btn--chevron-right::after,
+.btn--chevron-left::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+
+  @include icon-mask('../assets/icons/chevron-right.svg', true);
+}
+
+/* POSICIÓN */
+.btn--chevron-right::after {
+  margin-left: 0.5rem;
+}
+
+.btn--chevron-left::before {
+  margin-right: 0.5rem;
+}
+
+/* =========================
+  SMALL BUTTON (ICON ONLY)
+========================= */
+
+.btn--sm {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn--sm::after {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+
+  @include icon-mask('../assets/icons/chevron-right.svg');
+}
+
+/* =========================
+  NAVBAR BUTTON
+========================= */
+
+.btn--navbar {
+  padding: 0.5rem 1rem;
+  border: 1px solid $color-white;
+  background: rgba(255, 255, 255, 0.1);
+  color: $color-white;
+}
+
+.btn--navbar-dropdown::after {
+  content: '';
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+
+  background-color: currentColor;
+
+  @include icon-mask('../../../assets/icons/chevron-down.svg');
+
+  transition: transform 0.2s ease;
+}
+
+.btn--navbar-dropdown.is-open::after {
+  @include icon-mask('../../../assets/icons/chevron-up.svg');
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(0.98);
+  transition: all 0.2s ease;
+}
