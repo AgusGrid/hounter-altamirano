@@ -1,14 +1,10 @@
 function initCustomSelect() {
   const selectTriggers = document.querySelectorAll('.select-trigger');
-  if (selectTriggers.length === 0) return;
 
   selectTriggers.forEach((trigger) => {
-    if (trigger.dataset.initialized === 'true') return;
-    trigger.dataset.initialized = 'true';
-
     const select = trigger.closest('.custom-select');
     const list = select.querySelector('.select-list');
-    const valueEl = select.querySelector('.select-value, .value');
+    const valueEl = select.querySelector('.select-value, .value'); 
 
     trigger.addEventListener('click', () => {
       document.querySelectorAll('.custom-select.open').forEach((openSelect) => {
