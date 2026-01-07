@@ -1,15 +1,15 @@
 @use '../../abstracts/variables' as *;
 @use '../../abstracts/mixins' as *;
+@use '../../abstracts/breakpoints' as *;
 
 /* =========================
   SELECT — DEFAULT
 ========================= */
 .custom-select {
   font-family: Lexend, system-ui;
-  width: $ui-width;
   position: relative;
   font-weight: 500;
-  z-index: 1001;
+  z-index: 1002;
 
   .select-trigger {
     @include ui-control($border-color: #e5e7eb);
@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .chevron {
@@ -77,35 +77,43 @@
     background: transparent;
     border-color: $color-white;
     color: $color-white;
-    padding: 0.5rem 0.75rem;
-    width: 9.25rem; // 148px
-    height: 2.125rem; // 34px
+
+    width: clamp(7.5rem, 10vw, 9.25rem);
+    height: clamp(1.8rem, 2.2vw, 2.125rem);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 1vw 0.8vw;
     border-radius: 6.25rem;
     box-sizing: border-box;
-    font-size: 0.875rem;
+
+    font-size: clamp(0.75rem, 0.9vw, 0.875rem);
   }
 
   .select-list {
     font-family: inherit;
-    width: 9.25rem;
-    min-width: 9.25rem;
+    width: 100%;
+    min-width: 100%;
     background: transparent;
     border-color: $color-white;
     color: $color-white;
     padding: 0.25rem 0;
 
-    transform: translateY(-2rem);
+    transform: translateY(-1.9rem);
     border-radius: 1rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
     li {
       padding: 0.2rem 0.4rem;
       margin: 0.5rem;
-      font-size: 0.875rem;
+      font-size: clamp(0.7rem, 0.85vw, 0.875rem);
       &:hover {
-        background: rgba($primary, 0.1);
+        background: rgba($primary, 0);
         opacity: 0.5;
       }
     }
