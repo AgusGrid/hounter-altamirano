@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/breakpoints' as *;
 
 /* =========================
    HEADINGS
@@ -14,6 +15,10 @@ h1,
 
   .line {
     display: block;
+
+    @include breakpoint(lg, down) {
+      display: inline;
+    }
   }
 
   .highlight {

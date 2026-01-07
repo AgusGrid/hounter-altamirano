@@ -43,10 +43,69 @@
       </div>
 
       <button class="btn btn--outlined btn--soft">Sign up</button>
+    </div>
 
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <img src="./assets/icons/burger.svg" alt="Hamburger menu" />
-      </a>
+    <button
+      class="burger-menu-btn"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      <img src="./assets/icons/burger.svg" alt="Menú hamburguesa" />
+    </button>
+  </div>
+
+  <!-- Hamburger Menu -->
+  <div class="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <img
+          alt="logo-hounter"
+          aria-label="logo"
+          src="./assets/icons/logo.svg"
+        />
+        <button class="mobile-menu-close" aria-label="Cerrar menú">
+          <img src="./assets/icons/cross.svg" alt="" />
+        </button>
+      </div>
+      <nav class="mobile-menu-nav">
+        <button class="btn btn--filled btn--base">About Us</button>
+        <button class="btn btn--filled btn--base">Article</button>
+        <button class="btn btn--filled btn--base">Sign up</button>
+
+        <div class="custom-select custom-select--sm">
+          <button
+            class="select-trigger"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+          >
+            <span class="select-value">Property</span>
+            <span class="chevron" aria-hidden="true">
+              <svg
+                width="14"
+                height="9"
+                viewBox="0 0 14 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L13 1"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+
+          <ul class="select-list" role="listbox" aria-label="Property">
+            <li data-value="house" class="selected">House</li>
+            <li data-value="apartment">Apartment</li>
+            <li data-value="loft">Loft</li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
 </header>

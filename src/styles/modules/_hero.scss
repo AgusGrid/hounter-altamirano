@@ -38,6 +38,21 @@
     &__partnership {
       display: flex;
       justify-content: space-between;
+
+      @include breakpoint(lg, down) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3rem;
+        place-items: center;
+      }
+
+      &-img {
+        @include breakpoint(md, down) {
+          height: auto;
+          object-fit: contain;
+        }
+      }
     }
 
     &__cta {
