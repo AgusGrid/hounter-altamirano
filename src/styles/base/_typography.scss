@@ -103,6 +103,13 @@ h4,
 .label--medium {
   font-size: 0.875rem; // 14px
   font-weight: $font-medium;
+  position: relative;
+
+  &::before {
+    content: '—';
+    position: absolute;
+    left: -2rem;
+  }
 }
 
 .label--semibold {
