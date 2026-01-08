@@ -13,6 +13,10 @@
   border-radius: 100%;
   border-radius: 6.25rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  padding: clamp(0.5rem, 0.6vw, 0.75rem) clamp(1rem, 1.2vw, 1.5rem);
+  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
 }
 
 /* =========================
@@ -36,8 +40,6 @@
 .btn--filled.btn--base {
   background: $primary;
   border: 1px solid $primary;
-  padding: clamp(0.5rem, 0.6vw, 0.75rem) clamp(1rem, 1.2vw, 1.5rem);
-  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
 }
 
 .btn--filled.btn--dark {
@@ -67,21 +69,23 @@
 .btn--outlined.btn--base {
   background: $color-white;
   border: 1px solid $primary-dark;
-  color: $primary-dark;
+  color: $primary;
 }
 
 .btn--outlined.btn--soft {
   background: $primary-light;
   border: 1px solid $primary-dark;
   color: $primary-dark;
-  padding: clamp(0.5rem, 0.6vw, 0.75rem) clamp(1rem, 1.2vw, 1.5rem);
-  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
 }
 
 .btn--outlined.btn--soft-full {
   background: $primary-light;
   border: none;
-  color: $primary;
+  color: $primary-dark;
+
+  img {
+    color: currentColor;
+  }
 }
 
 /* =========================
@@ -107,6 +111,7 @@
 
 .btn--chevron-left::before {
   margin-right: 0.5rem;
+  transform: rotate(180deg);
 }
 
 /* =========================
@@ -117,9 +122,12 @@
   padding: 0;
   width: 3rem;
   height: 3rem;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s ease;
 }
 
-.btn--sm::after {
+.btn--sm:not(.btn--chevron-left):not(.btn--chevron-right)::after {
   content: '';
   display: inline-block;
   width: 1.5rem;
@@ -127,6 +135,27 @@
   background-color: currentColor;
 
   @include icon-mask('../assets/icons/chevron-right.svg');
+}
+
+.btn--sm.btn--chevron-right::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+  @include icon-mask('../assets/icons/chevron-right.svg', true);
+}
+
+.btn--sm.btn--chevron-left::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+  @include icon-mask('../assets/icons/chevron-right.svg', true);
+  transform: rotate(180deg);
 }
 
 /* =========================
@@ -157,8 +186,38 @@
   @include icon-mask('../../../assets/icons/chevron-up.svg');
 }
 
-.btn:hover {
+/* =========================
+  BUTTON WITH ICON
+========================= */
+
+.btn--with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+}
+
+/* =========================
+  NAVIGATION BUTTON STATES
+========================= */
+
+.btn--nav-active {
+  background-color: $primary !important;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.btn:hover,
+.btn--sm:hover {
   opacity: 0.9;
   transform: scale(0.98);
-  transition: all 0.2s ease;
+  cursor: pointer;
 }

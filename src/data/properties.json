@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "type": "house",
+    "image": "./assets/images/featured-house/roselands-house.jpg",
+    "label": {
+      "type": "danger",
+      "text": "Popular"
+    },
+    "title": "Roselands House",
+    "price": "$ 35.000.000",
+    "agent": {
+      "avatar": "./assets/images/avatar/av6.jpg",
+      "name": "Dianne Russell",
+      "location": "Manchester, Kentucky"
+    }
+  },
+  {
+    "id": 2,
+    "type": "villa",
+    "image": "./assets/images/featured-house/woodlandside.jpg",
+    "label": {
+      "type": "info",
+      "text": "New House"
+    },
+    "title": "Woodlandside",
+    "price": "$ 20.000.000",
+    "agent": {
+      "avatar": "./assets/images/avatar/av7.jpg",
+      "name": "Robert Fox",
+      "location": "Dr. San Jose, South Dakota"
+    }
+  },
+  {
+    "id": 3,
+    "type": "apartment",
+    "image": "./assets/images/featured-house/the-old-lighthouse.jpg",
+    "label": {
+      "type": "success",
+      "text": "Best Deals"
+    },
+    "title": "The Old Lighthouse",
+    "price": "$ 44.000.000",
+    "agent": {
+      "avatar": "./assets/images/avatar/av8.jpg",
+      "name": "Ronald Richards",
+      "location": "Santa Ana, Illinois"
+    }
+  },
+  {
+    "id": 4,
+    "type": "house",
+    "image": "./assets/images/featured-house/cosmo-house.jpg",
+    "label": {
+      "type": "danger",
+      "text": "Popular"
+    },
+    "title": "Cosmo's House",
+    "price": "$ 22.000.000",
+    "agent": {
+      "avatar": "./assets/images/avatar/av3.jpg",
+      "name": "Jenny Wilson",
+      "location": "Preston Rd. Inglewood, Maine"
+    }
+  }
+]

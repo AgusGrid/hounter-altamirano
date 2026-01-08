@@ -48,7 +48,7 @@ h4,
 .heading-4 {
   font-family: $font-primary;
   font-size: 1.25rem; // 20px
-  font-weight: $font-semibold;
+  font-weight: $font-medium;
   line-height: 1.2;
   text-transform: capitalize;
 }
@@ -103,6 +103,13 @@ h4,
 .label--medium {
   font-size: 0.875rem; // 14px
   font-weight: $font-medium;
+  position: relative;
+
+  &::before {
+    content: '—';
+    position: absolute;
+    left: -2rem;
+  }
 }
 
 .label--semibold {
