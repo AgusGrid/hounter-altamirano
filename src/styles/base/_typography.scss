@@ -1,15 +1,29 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoints' as *;
 
 /* =========================
    HEADINGS
 ========================= */
+
 h1,
 .heading-1 {
   font-family: $font-primary;
-  font-size: 2.5rem; // 40px
-  font-weight: $font-black;
+  font-size: clamp(2rem, 2vw + 1rem, 4rem);
+  font-weight: $font-bolder;
   line-height: 1.2;
   text-transform: capitalize;
+
+  .line {
+    display: block;
+
+    @include breakpoint(lg, down) {
+      display: inline;
+    }
+  }
+
+  .highlight {
+    color: $primary;
+  }
 }
 
 h2,
@@ -57,6 +71,8 @@ h4,
   font-size: 1rem; // 16px
   font-weight: $font-light;
   line-height: 1.5rem; // 24px
+  color: $gray-500;
+  text-align: justify;
 }
 
 .body-text--medium {

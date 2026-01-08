@@ -1,25 +1,26 @@
 // Abstracts (variables, mixins, breakpoints)
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
-@use "abstracts/breakpoints" as *;
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/breakpoints' as *;
 
 // Base (resets, typography, globals)
-@use "base/resets";
-@use "base/typography";
-@use "base/globals";
+@use 'base/resets';
+@use 'base/typography';
+@use 'base/globals';
 
 // Modules (component styles)
-@use "modules/hero";
-@use "modules/navbar";
-@use "modules/featured-house";
-@use "modules/tour";
+@use 'modules/hero';
+@use 'modules/navbar';
+@use 'modules/featured-house';
+@use 'modules/tour';
 
 // Modules - UI (reusable components)
 
-@use "modules/ui/buttons";
-@use "modules/ui/input";
-@use "modules/ui/select";
-@use "modules/ui/labels";
-@use "modules/ui/icons";
-@use "modules/ui/checkbox";
-@use "modules/ui/textarea";
+@use 'modules/ui/buttons';
+@use 'modules/ui/input';
+@use 'modules/ui/select';
+@use 'modules/ui/labels';
+@use 'modules/ui/icons';
+@use 'modules/ui/checkbox';
+@use 'modules/ui/textarea';
+@use 'modules/ui/cards';
