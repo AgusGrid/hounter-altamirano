@@ -1,1 +1,55 @@
-<section class="featured-house">Featured-house</section>
+<section class="featured-house">
+  <div class="featured-house__header">
+    <div class="featured-house__header-text">
+      <p class="label--medium featured-house__recommendation">
+        Our Recommendation
+      </p>
+      <h2 class="featured-house__title heading-2">Featured House</h2>
+    </div>
+
+    <div class="featured-house__controls">
+      <div class="featured-house__filters">
+        <button
+          class="btn btn--outlined btn--base btn--with-icon"
+          type="button"
+        >
+          <img src="./assets/icons/shapes/house.svg" alt="House icon" />
+          <span class="label--semibold">House</span>
+        </button>
+        <button
+          class="btn btn--outlined btn--base btn--with-icon"
+          type="button"
+        >
+          <img src="./assets/icons/shapes/villa.svg" alt="Villa icon" />
+          <span class="label--semibold">Villa</span>
+        </button>
+        <button
+          class="btn btn--outlined btn--base btn--with-icon"
+          type="button"
+        >
+          <img src="./assets/icons/shapes/apartment.svg" alt="Apartment icon" />
+          <span class="label--semibold">Apartment</span>
+        </button>
+      </div>
+
+      <div class="featured-house__navigation">
+        <button
+          class="btn--sm btn--outlined btn--base featured-house__nav-btn featured-house__nav-btn--hidden btn--chevron-left"
+          type="button"
+          aria-label="Previous"
+          data-direction="prev"
+        ></button>
+        <button
+          class="btn--sm btn--outlined btn--base featured-house__nav-btn featured-house__nav-btn--hidden btn--chevron-right"
+          type="button"
+          aria-label="Next"
+          data-direction="next"
+        ></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-house__cards-container">
+    <!-- Cards render here -->
+  </div>
+</section>

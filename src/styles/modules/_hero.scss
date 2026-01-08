@@ -23,14 +23,13 @@
     padding-right: $house-inner-padding;
 
     @include breakpoint(xxl, down) {
-      justify-content: flex-start;
       padding-top: 8rem;
     }
 
     @include breakpoint(md, down) {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
-      padding-top: 6rem;
+      padding-top: 5rem;
       padding-bottom: 2rem;
       order: 1;
     }

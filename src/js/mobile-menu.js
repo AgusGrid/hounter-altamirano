@@ -57,9 +57,7 @@ function initMobileMenu() {
   });
 }
 
-document.addEventListener('componentsLoaded', () => {
-  initMobileMenu();
-});
+document.addEventListener('componentsLoaded', initMobileMenu);
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initMobileMenu);
