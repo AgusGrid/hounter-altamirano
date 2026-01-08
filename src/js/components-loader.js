@@ -39,7 +39,10 @@ async function loadAllComponents() {
   const components = [
     { path: 'components/header.html', container: 'header-container' },
     { path: 'components/hero.html', container: 'hero-container' },
-    { path: 'components/featured-house.html', container: 'featured-house-container' },
+    {
+      path: 'components/featured-house.html',
+      container: 'featured-house-container',
+    },
   ];
 
   await Promise.all(
