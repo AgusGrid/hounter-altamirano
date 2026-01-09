@@ -198,6 +198,13 @@ h4,
 .label--medium {
   font-size: 0.875rem;
   font-weight: 500;
+  position: relative;
+  color: #f59e0b;
+}
+.label--medium::before {
+  content: "—";
+  position: absolute;
+  left: -2rem;
 }
 
 .label--semibold {
@@ -245,7 +252,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-left: 15%;
-  padding-right: 15%;
+  padding-right: 10%;
 }
 @media (max-width: 1400px) {
   .hero-left {
@@ -354,7 +361,7 @@ body {
 .header-left {
   padding-top: 2rem;
   padding-left: 15%;
-  padding-right: 15%;
+  padding-right: 10%;
   display: flex;
   align-items: flex-start;
 }
@@ -503,8 +510,9 @@ body {
 
 .featured-house {
   padding-top: 5rem;
+  padding-bottom: 5rem;
   padding-left: calc(15% / 2);
-  padding-right: 15%;
+  padding-right: 10%;
   color: #1b1c57;
 }
 @media (max-width: 768px) {
