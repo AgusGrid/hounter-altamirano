@@ -104,6 +104,7 @@ h4,
   font-size: 0.875rem; // 14px
   font-weight: $font-medium;
   position: relative;
+  color: $secondary;
 
   &::before {
     content: '—';

@@ -10,7 +10,6 @@
  */
 async function loadComponent(componentPath, containerId) {
   try {
-
     const response = await fetch(componentPath);
 
     if (!response.ok) {
@@ -43,6 +42,7 @@ async function loadAllComponents() {
       path: 'components/featured-house.html',
       container: 'featured-house-container',
     },
+    { path: 'components/tour.html', container: 'tour-container' },
   ];
 
   await Promise.all(
@@ -50,9 +50,7 @@ async function loadAllComponents() {
   );
 
   // Dispara un evento personalizado cuando todos los componentes estan cargados
-  document.dispatchEvent(
-    new CustomEvent('componentsLoaded')
-  );
+  document.dispatchEvent(new CustomEvent('componentsLoaded'));
 }
 
 if (document.readyState === 'loading')
