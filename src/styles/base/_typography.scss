@@ -12,6 +12,7 @@ h1,
   font-weight: $font-bolder;
   line-height: 1.2;
   text-transform: capitalize;
+  user-select: text;
 
   .line {
     display: block;
@@ -73,6 +74,7 @@ h4,
   line-height: 1.5rem; // 24px
   color: $gray-500;
   text-align: justify;
+  user-select: text;
 }
 
 .body-text--medium {

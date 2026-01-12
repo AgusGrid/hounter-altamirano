@@ -7,6 +7,7 @@
   width: 100%;
   left: 0%;
   overflow: hidden;
+  pointer-events: auto;
 
   @include breakpoint(md, down) {
     position: relative;
@@ -18,6 +19,8 @@
   &__marquee {
     display: inline-block;
     white-space: nowrap;
+    user-select: text;
+    pointer-events: auto;
   }
 }
 
@@ -30,6 +33,8 @@
   gap: 1rem;
   margin-right: 1rem;
   vertical-align: top;
+  user-select: text;
+  pointer-events: auto;
 
   &-avatar {
     display: flex;
@@ -68,5 +73,6 @@
     flex-direction: column;
     justify-content: center;
     line-height: 1.25;
+    user-select: text;
   }
 }

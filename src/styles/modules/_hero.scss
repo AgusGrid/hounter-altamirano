@@ -21,6 +21,8 @@
     justify-content: center;
     padding-left: $margin-left-global;
     padding-right: $house-inner-padding;
+    z-index: 1;
+    pointer-events: auto;
 
     @include breakpoint(xxl, down) {
       padding-top: 8rem;
@@ -59,12 +61,16 @@
       flex-direction: column;
       text-align: left;
       gap: 1.2rem;
+      pointer-events: auto;
+      user-select: text;
     }
 
     &__blur-bg--1 {
       position: absolute;
       top: -30%;
       left: 0%;
+      pointer-events: none;
+      z-index: -1;
     }
   }
 
