@@ -119,3 +119,21 @@ h4,
   font-size: 0.875rem; // 14px
   font-weight: $font-semibold;
 }
+
+.label--top {
+  font-size: 0.875rem; // 14px
+  font-weight: $font-regular;
+  color: $secondary;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 1px;
+    background-image: url('../../assets/images/rectangle.png');
+  }
+}

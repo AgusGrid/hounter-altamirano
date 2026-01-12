@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "backgroundImage": "./assets/images/testimonials/h3.jpg",
+    "title": "My house sold out fast!",
+    "text": "I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!",
+    "agent": {
+      "avatar": "./assets/images/avatar/av6.jpg",
+      "name": "Dianne Russell",
+      "location": "Manchester, Kentucky"
+    },
+    "rating": 4.3
+  },
+  {
+    "id": 2,
+    "backgroundImage": "./assets/images/testimonials/h1.jpg",
+    "title": "Best! I Got The House I Wanted Through Hounter",
+    "text": "Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.",
+    "agent": {
+      "avatar": "./assets/images/avatar/av3.jpg",
+      "name": "Jenny Wilson",
+      "location": "Manager Director"
+    },
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "backgroundImage": "./assets/images/testimonials/h2.jpg",
+    "title": "Through the Hounter, I can get a house for my self",
+    "text": "By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!",
+    "agent": {
+      "avatar": "./assets/images/avatar/av8.jpg",
+      "name": "Ronald Richards",
+      "location": "Head of Marketing"
+    },
+    "rating": 4.6
+  }
+]

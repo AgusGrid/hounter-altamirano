@@ -43,6 +43,10 @@ async function loadAllComponents() {
       container: 'featured-house-container',
     },
     { path: 'components/tour.html', container: 'tour-container' },
+    {
+      path: 'components/testimonials.html',
+      container: 'testimonials-container',
+    },
   ];
 
   await Promise.all(
