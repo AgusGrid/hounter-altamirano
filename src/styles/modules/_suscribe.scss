@@ -32,13 +32,7 @@
         border: 2px solid $color-white;
         position: absolute;
         width: 6.5rem;
-        height: 6rem;feat: HA-10 Suscribe. Add subscribe section and styles
-
-        Jira: https://ui-internship-wasyluk.atlassian.net/browse/HA-10
-        
-        - Introduced a new subscribe container in index.html.
-        - Updated components-loader.js to load the subscribe component.
-        - Added styles for the subscribe section in main.css and main.scss.
+        height: 6rem;
         top: 2.375rem;
         left: 4rem;
         border-radius: 1.5rem;
