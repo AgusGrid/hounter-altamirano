@@ -5,7 +5,6 @@
  * @param {HTMLElement} select - The select container
  */
 function handleTriggerClick(trigger, select) {
-  // Close other open selects
   document.querySelectorAll('.custom-select.open').forEach((openSelect) => {
     if (openSelect !== select) {
       openSelect.classList.remove('open');
@@ -15,10 +14,22 @@ function handleTriggerClick(trigger, select) {
     }
   });
 
-  // Toggle current select
   select.classList.toggle('open');
   const expanded = select.classList.contains('open');
   trigger.setAttribute('aria-expanded', expanded);
+
+  // sync the width of the select-list with the select-trigger
+  if (expanded) {
+    const list = select.querySelector('.select-list');
+    if (list && trigger) {
+      requestAnimationFrame(() => {
+        const triggerWidth = trigger.offsetWidth;
+        list.style.width = `${triggerWidth}px`;
+        list.style.minWidth = `${triggerWidth}px`;
+        list.style.maxWidth = `${triggerWidth}px`;
+      });
+    }
+  }
 }
 
 /**
@@ -32,15 +43,14 @@ function handleTriggerClick(trigger, select) {
 function handleOptionClick(option, select, list, valueEl, trigger) {
   const text = option.textContent.trim();
   if (valueEl) valueEl.textContent = text;
-  if (option.dataset.value !== undefined) {
-    select.dataset.value = option.dataset.value;
-  }
 
-  // Remove selected class from all options
+  if (option.dataset.value !== undefined)
+    select.dataset.value = option.dataset.value;
+  else select.dataset.value = text.toLowerCase().replace(/\s+/g, '-');
+
   list.querySelectorAll('li').forEach((li) => li.classList.remove('selected'));
   option.classList.add('selected');
 
-  // Close select
   select.classList.remove('open');
   trigger.setAttribute('aria-expanded', 'false');
   trigger.focus();
@@ -61,7 +71,6 @@ function handleOutsideClick(e) {
   });
 }
 
-// Export functions to global scope
 window.CustomSelectHandlers = {
   handleTriggerClick,
   handleOptionClick,
