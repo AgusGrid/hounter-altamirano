@@ -1,0 +1,121 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoints' as *;
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+.heading-1 {
+  font-family: $font-primary;
+  font-size: clamp(2rem, 2vw + 1rem, 4rem);
+  font-weight: $font-bolder;
+  line-height: 1.2;
+  text-transform: capitalize;
+  user-select: text;
+
+  .line {
+    display: block;
+
+    @include breakpoint(lg, down) {
+      display: inline;
+    }
+  }
+
+  .highlight {
+    color: $primary;
+  }
+}
+
+h2,
+.heading-2 {
+  font-family: $font-primary;
+  font-size: 2rem; // 32px
+  font-weight: $font-semibold;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h3,
+.heading-3 {
+  font-family: $font-primary;
+  font-size: 1.5rem; // 24px
+  font-weight: $font-medium;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h4,
+.heading-4 {
+  font-family: $font-primary;
+  font-size: 1.25rem; // 20px
+  font-weight: $font-medium;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+  font-family: $font-primary;
+  font-size: 1.125rem; // 18px
+  font-weight: $font-medium;
+  line-height: 1.3;
+}
+
+/* =========================
+   BODY
+========================= */
+.body-text {
+  font-family: $font-primary;
+  font-size: 1rem; // 16px
+  font-weight: $font-light;
+  line-height: 1.5rem; // 24px
+  color: $gray-500;
+  text-align: justify;
+  user-select: text;
+}
+
+.body-text--medium {
+  font-size: 1rem; // 16px
+  font-weight: $font-medium;
+}
+
+.body-text--semibold {
+  font-size: 1rem; // 16px
+  font-weight: $font-semibold;
+}
+
+/* =========================
+   LABEL
+========================= */
+.label {
+  font-family: $font-primary;
+  font-size: 0.875rem; // 14px
+  font-weight: $font-regular;
+  line-height: 1.5rem; // 24px
+}
+
+.label--small {
+  font-size: 0.75rem; // 12px
+  line-height: normal;
+}
+
+.label--medium {
+  font-size: 0.875rem; // 14px
+  font-weight: $font-medium;
+  position: relative;
+  color: $secondary;
+
+  &::before {
+    content: '—';
+    position: absolute;
+    left: -2rem;
+  }
+}
+
+.label--semibold {
+  font-size: 0.875rem; // 14px
+  font-weight: $font-semibold;
+}

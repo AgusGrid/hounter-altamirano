@@ -1,0 +1,27 @@
+{
+  "name": "hounter-altamirano",
+  "version": "1.0.0",
+  "description": "Landing page for the advanced landing page project. Grid Dynamics internship.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass src/styles/main.scss src/styles/main.css --no-source-map --style=compressed",
+    "dev": "concurrently \"npm run watch:css\" \"npm run start\"",
+    "watch:css": "sass --watch src/styles/main.scss:src/styles/main.css --style=expanded",
+    "start": "live-server src --port=3000 --open=/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "prettier": "^3.7.4",
+    "sass": "^1.97.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgusGrid/hounter-altamirano.git"
+  },
+  "keywords": [],
+  "author": "Agustin Altamirano",
+  "license": "ISC"
+}

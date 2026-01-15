@@ -1,0 +1,223 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/breakpoints' as *;
+
+/* =========================
+  BUTTONS
+========================= */
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border-radius: 6.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  padding: clamp(0.5rem, 0.6vw, 0.75rem) clamp(1rem, 1.2vw, 1.5rem);
+  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
+}
+
+/* =========================
+  TYPES
+========================= */
+
+.btn--filled {
+  color: $color-white;
+}
+
+.btn--outlined {
+  background: transparent;
+  border: 1px solid $color-white;
+  color: $color-white;
+}
+
+/* =========================
+  FILLED VARIANTS
+========================= */
+
+.btn--filled.btn--base {
+  background: $primary;
+  border: 1px solid $primary;
+}
+
+.btn--filled.btn--dark {
+  background: $primary-dark;
+  border: 1px solid $primary-dark;
+}
+
+/* =========================
+  OUTLINED VARIANTS
+========================= */
+
+.btn--outlined.btn--nav {
+  text-transform: capitalize;
+  font-weight: 600;
+
+  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
+
+  padding: 0.6vw 0.8vw;
+  line-height: 100%;
+  white-space: nowrap;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.btn--outlined.btn--base {
+  background: $color-white;
+  border: 1px solid $primary-dark;
+  color: $primary;
+}
+
+.btn--outlined.btn--soft {
+  background: $primary-light;
+  border: 1px solid $primary-dark;
+  color: $primary-dark;
+}
+
+.btn--outlined.btn--soft-full {
+  background: $primary-light;
+  border: none;
+  color: $primary-dark;
+
+  img {
+    color: currentColor;
+  }
+}
+
+/* =========================
+  ICON VARIANTS
+========================= */
+
+/* CHEVRON ">" */
+.btn--chevron-right::after,
+.btn--chevron-left::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+
+  @include icon-mask('../assets/icons/chevron-right.svg', true);
+}
+
+/* POSICIÓN */
+.btn--chevron-right::after {
+  margin-left: 0.5rem;
+}
+
+.btn--chevron-left::before {
+  margin-right: 0.5rem;
+  transform: rotate(180deg);
+}
+
+/* =========================
+  SMALL BUTTON (ICON ONLY)
+========================= */
+
+.btn--sm {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.btn--sm:not(.btn--chevron-left):not(.btn--chevron-right)::after {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+
+  @include icon-mask('../assets/icons/chevron-right.svg');
+}
+
+.btn--sm.btn--chevron-right::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+  @include icon-mask('../assets/icons/chevron-right.svg', true);
+}
+
+.btn--sm.btn--chevron-left::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+  @include icon-mask('../assets/icons/chevron-right.svg', true);
+  transform: rotate(180deg);
+}
+
+/* =========================
+  NAVBAR BUTTON
+========================= */
+
+.btn--navbar {
+  padding: 0.5rem 1rem;
+  border: 1px solid $color-white;
+  background: rgba(255, 255, 255, 0.1);
+  color: $color-white;
+}
+
+.btn--navbar-dropdown::after {
+  content: '';
+  display: inline-block;
+  width: clamp(7.5rem, 10vw, 9.25rem);
+  height: clamp(1.8rem, 2.2vw, 2.125rem);
+
+  background-color: currentColor;
+
+  @include icon-mask('../../../assets/icons/chevron-down.svg');
+
+  transition: transform 0.2s ease;
+}
+
+.btn--navbar-dropdown.is-open::after {
+  @include icon-mask('../../../assets/icons/chevron-up.svg');
+}
+
+/* =========================
+  BUTTON WITH ICON
+========================= */
+
+.btn--with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+}
+
+/* =========================
+  NAVIGATION BUTTON STATES
+========================= */
+
+.btn--nav-active {
+  background-color: $primary !important;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.btn:hover,
+.btn--sm:hover {
+  opacity: 0.9;
+  transform: scale(0.98);
+  cursor: pointer;
+}

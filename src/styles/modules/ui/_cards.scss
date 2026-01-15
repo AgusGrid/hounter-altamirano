@@ -1,0 +1,78 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/breakpoints' as *;
+
+.card-container {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  left: 0%;
+  overflow: hidden;
+  pointer-events: auto;
+
+  @include breakpoint(md, down) {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    padding: 1.5rem;
+  }
+
+  &__marquee {
+    display: inline-block;
+    white-space: nowrap;
+    user-select: text;
+    pointer-events: auto;
+  }
+}
+
+.card {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 2rem;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+  margin-right: 1rem;
+  vertical-align: top;
+  user-select: text;
+  pointer-events: auto;
+
+  &-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-avatar-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-left: -1.8rem;
+      border: 3px solid $color-white;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.25;
+    user-select: text;
+  }
+}

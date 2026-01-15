@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "avatars": [
+      "./assets/images/avatar/av1.jpg",
+      "./assets/images/avatar/av2.jpg",
+      "./assets/images/avatar/av3.jpg"
+    ],
+    "title": "1K+ People",
+    "subtitle": "Successfully Getting Home",
+    "type": "group"
+  },
+  {
+    "id": 2,
+    "avatars": ["./assets/images/avatar/av4.png"],
+    "title": "56 Houses",
+    "subtitle": "Sold Monthly",
+    "type": "single"
+  },
+  {
+    "id": 3,
+    "avatars": ["./assets/images/avatar/av5.jpg"],
+    "title": "4K+",
+    "subtitle": "People Looking for New Homes",
+    "type": "single"
+  }
+]

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hounter - Playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Custom Select (Hero) -->
+    <script src="./js/hero/custom-select/handlers.js" defer></script>
+    <script src="./js/hero/custom-select/index.js" defer></script>
+
+    <!-- <style>
+      body {
+        background: #f8fafc;
+      }
+      header.navbar {
+        background: linear-gradient(90deg, #5b21b6 0%, #06b6d4 100%);
+        color: white;
+        padding: 1rem 0;
+      }
+      .navbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: inherit;
+        text-decoration: none;
+      }
+      .nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      .nav__link {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+      }
+      .nav-dropdown {
+        position: absolute;
+        right: 1rem;
+        top: 64px;
+        background: white;
+        color: #111827;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        display: none;
+      }
+      .nav-dropdown.is-open {
+        display: block;
+      }
+
+      .hero {
+        padding: 4rem 0;
+        text-align: left;
+        color: #0f172a;
+      }
+      .hero .lead {
+        color: #475569;
+        margin-bottom: 1rem;
+      }
+
+      /* Demo additions */
+      .showcase { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top:1rem; }
+      .swatch { height:96px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:600; }
+      .typography-samples > * { margin: 0 0 0.5rem 0; }
+      .btn-row { display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center; }
+      .muted { color:#6b7280; }
+
+      .card {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      }
+
+      footer {
+        padding: 2rem 0;
+        text-align: center;
+        color: #475569;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- 
+    =====================================================
+    STORYBOARD DE COMPONENTES - SÓLO PARA DESARROLLO
+    =====================================================
+    -->
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Encuentra el espacio ideal</h1>
+          <p class="lead">
+            Explora inmuebles, reserva tours y descubre tu próximo hogar.
+          </p>
+          <a class="button" href="#featured">Ver propiedades</a>
+        </div>
+      </section>
+
+      <section class="palette container" aria-label="Colores y tipografías">
+        <h2>Paleta y tipografía</h2>
+        <div class="showcase">
+          <div>
+            <h3>Colores principales</h3>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+              <div class="swatch" style="background:#10b981;">#10b981</div>
+              <div class="swatch" style="background:#0b9567;">#0b9567</div>
+              <div class="swatch" style="background:#d1fae5;color:#0b9567;">#d1fae5</div>
+              <div class="swatch" style="background:#5b21b6;">#5b21b6</div>
+              <div class="swatch" style="background:#06b6d4;">#06b6d4</div>
+              <div class="swatch" style="background:#111827;">#111827</div>
+              <div class="swatch" style="background:#ffffff;color:#111827;">#ffffff</div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Tipografías</h3>
+            <div class="typography-samples">
+              <h1>H1 — Heading grande</h1>
+              <h2>H2 — Heading mediano</h2>
+              <h3>H3 — Heading pequeño</h3>
+              <h4>H4 — Heading compacto</h4>
+              <p class="subtitle">Subtitle / Eye-catching subtitle text</p>
+              <p class="body-text">Body regular: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p class="body-text body-text--semibold">Body semibold</p>
+              <p class="muted">Muted / Small metadata text</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons showcase -->
+      <section id="buttons" class="buttons container" aria-label="Botones" style="margin-top:2rem;">
+        <h2>Botones</h2>
+        <div class="card">
+          <div class="btn-row" style="margin-bottom:0.75rem;">
+            <a class="btn btn--filled btn--base button" href="#">Filled base</a>
+            <a class="btn btn--filled btn--dark button" href="#">Filled dark</a>
+            <a class="btn btn--outlined btn--base button" href="#">Outlined base</a>
+            <a class="btn btn--outlined btn--soft button" href="#">Outlined soft</a>
+            <a class="btn btn--outlined btn--soft-full button" href="#">Soft full</a>
+          </div>
+
+          <div class="btn-row" style="margin-bottom:0.75rem;">
+            <button class="btn btn--chevron-left btn--outlined btn--base">Anterior</button>
+            <button class="btn btn--chevron-right btn--filled btn--base">Siguiente</button>
+            <button class="btn btn--chevron-left btn--outlined btn--soft-full">Siguiente</button>
+            <button class="btn btn--sm btn--filled btn--base" aria-label="icon"></button>
+            <button class="btn btn--sm btn--outlined btn--base" aria-label="icon"></button>
+            <button class="btn btn--sm btn--filled btn--dark" aria-label="icon"></button>
+            <button class="btn btn--sm btn--outlined btn--soft" aria-label="icon"></button>
+            <button class="btn btn--navbar">Navbar</button>
+          </div>
+
+        </div>
+      </section>
+      </section>
+      <section>
+        <h2>Labels</h2>
+            <div class="card">
+        <div class="label label--danger">
+            Popular
+        </div>
+        <div class="label label--info">
+            New house
+        </div>
+        <div class="label label--success">
+            Best deals
+        </div>
+        </div>
+      </section>
+       <section>
+        <h2>Inputs</h2>
+        <br/>
+        <input type="text" class="input" placeholder="Your email here">
+        <br/>
+        <div class="search-bar">
+            <span class="search-bar__icon"></span>
+            <input type="text" class="search-bar__input" placeholder="Search for the location you want!">
+            <button class="btn btn--filled btn--base btn--chevron-right">Search</button>
+        </div>
+         <br/>
+         <div class="select">
+            <div class="custom-select">
+              <button
+                class="select-trigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+              >
+                <span class="value">Select</span>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" />
+                </svg>
+              </button>
+
+              <ul class="select-list" role="listbox">
+                <li role="option">HTML</li>
+                <li role="option">CSS</li>
+                <li role="option" class="selected">JavaScript</li>
+                <li role="option">React</li>
+              </ul>
+            </div>
+         </div>
+        <br/>
+        <textarea class="textarea" >
+        </textarea>
+        <br/>
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__input">
+          <span class="custom-checkbox__box"></span>
+          <span class="custom-checkbox__label-text" style="width:50ch">I give consent to the processing of my personal data given in the contact form above under the terms and conditions of Grid Dynamics Privacy Policy.</span>
+       </label>
+        <br/>
+      </section>
+    
+    <script>
+      // Toggle simple dropdown for demo
+      (function () {
+        const menuBtn = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+        menuBtn.addEventListener("click", function () {
+          const open = menu.classList.toggle("is-open");
+          menuBtn.classList.toggle("is-open");
+          menu.style.display = open ? "block" : "none";
+          menuBtn.setAttribute("aria-expanded", open);
+          menu.setAttribute("aria-hidden", !open);
+        });
+      })();
+    </script>
+  </body>
+</html>

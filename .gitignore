@@ -1,0 +1,51 @@
+# ===============================
+# Node / Package managers
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===============================
+# Build outputs
+# ===============================
+dist/
+build/
+.cache/
+
+# ===============================
+# Environment variables
+# ===============================
+.env
+.env.local
+.env.*.local
+
+# ===============================
+# SCSS / CSS generated files
+# ===============================
+*.css.map
+*.scss.map
+
+# ===============================
+# OS / Editor files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+
+# ===============================
+# Testing / Coverage
+# ===============================
+coverage/
+
+# ===============================
+# Misc
+# ===============================
+*.log
