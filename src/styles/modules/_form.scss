@@ -71,7 +71,6 @@
   align-items: center;
 
   &__label {
-    @extend .label;
     font-size: 1rem;
     font-weight: $font-medium;
     color: $color-black;
