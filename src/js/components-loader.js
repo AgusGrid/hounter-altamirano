@@ -46,6 +46,8 @@ async function loadAllComponents() {
     {
       path: 'components/find-more.html',
       container: 'find-more-container',
+      path: 'components/testimonials.html',
+      container: 'testimonials-container',
     },
   ];
 
