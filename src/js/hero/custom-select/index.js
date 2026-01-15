@@ -14,7 +14,11 @@ function initCustomSelect() {
 
   selectTriggers.forEach((trigger) => {
     const select = trigger.closest('.custom-select');
+    if (!select) return;
+
     const list = select.querySelector('.select-list');
+    if (!list) return;
+
     const valueEl = select.querySelector('.select-value, .value');
 
     // Add trigger click handler
