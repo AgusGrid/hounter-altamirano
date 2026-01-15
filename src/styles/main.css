@@ -257,6 +257,7 @@ body {
   background-color: transparent;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  user-select: text;
 }
 @media (max-width: 768px) {
   .hero {
@@ -274,6 +275,7 @@ body {
   padding-right: 10%;
   z-index: 1;
   pointer-events: auto;
+  user-select: text;
 }
 @media (max-width: 1400px) {
   .hero-left {
