@@ -178,6 +178,7 @@ h4,
 
 /* =========================
    LABEL
+.label, .form-field__label {
 .label {
   font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.875rem;
@@ -844,6 +845,7 @@ body {
   margin: 0;
 }
 
+.form {
 .suscribe {
 .testimonials {
   padding-top: 5rem;
@@ -851,6 +853,49 @@ body {
   padding-left: calc(15% / 2);
   padding-right: 10%;
 }
+.form-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+}
+.form-container__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 8px 32px 0px rgba(12, 21, 55, 0.09);
+  background-color: #ffffff;
+}
+.form-container__left-title {
+  text-align: center;
+  color: #1b1c57;
+  margin-bottom: 0.5rem;
+}
+.form-container__left-description {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.form-container__left-separator {
+  width: 3rem;
+  height: 2px;
+  background-color: #10b981;
+  margin: 0.5rem auto;
+}
+.form-container__left-img {
+  object-fit: cover;
+  margin: 1rem auto 0;
+  width: 261px;
+  height: 206px;
+}
+.form-container__right {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 8px 32px 0px rgba(12, 21, 55, 0.09);
+  background-color: #ffffff;
+  width: 100%;
+}
+.form-container__right-form {
 .suscribe__container {
   background: url("../../assets/images/suscribe/bg.png") no-repeat center center/cover;
   border-radius: 2rem;
@@ -1027,6 +1072,95 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
+
+.form-field {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.form-field__label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1b1c57;
+  text-align: left;
+}
+.form-field__input {
+  width: 100%;
+  color: #626687;
+}
+.form-field__input:focus, .form-field__input:not(:placeholder-shown) {
+  color: #626687;
+}
+.form-field__select {
+  width: 100%;
+}
+.form-field__select .select-trigger {
+  width: 100%;
+  justify-content: space-between;
+}
+.form-field__select .select-value {
+  flex: 1;
+  text-align: left;
+  color: #888b97;
+}
+.form-field__select[data-value] .select-value {
+  color: #626687;
+}
+.form-field__select .chevron {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.form-field__select .chevron img {
+  width: 1rem;
+  height: 1rem;
+}
+.form-field__textarea-wrapper {
+  position: relative;
+  width: fit-content;
+}
+.form-field__textarea {
+  width: 100%;
+  resize: vertical;
+  padding-bottom: 2rem;
+  color: #626687;
+}
+.form-field__textarea::placeholder {
+  color: #888b97;
+}
+.form-field__textarea:focus, .form-field__textarea:not(:placeholder-shown) {
+  color: #626687;
+}
+.form-field__textarea:focus {
+  border-color: #10b981;
+}
+.form-field__char-count {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  color: #888b97;
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  pointer-events: none;
+}
+.form-field--checkbox {
+  align-items: flex-start;
+}
+.form-field--checkbox .custom-checkbox {
+  grid-column: 2;
+  width: 100%;
+  align-items: flex-start;
+}
+.form-field--checkbox .custom-checkbox__label-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #626687;
+  white-space: nowrap;
+}
+.form-field--submit {
+  grid-column: 2;
+  align-items: center;
 .testimonials__container-content-item-header {
   margin-bottom: 0;
 }
@@ -1359,6 +1493,9 @@ body {
   line-height: 24px;
   font-size: 1rem;
 }
+.input::placeholder {
+  color: #888b97;
+}
 
 /* COMPLEX */
 .search-bar {
@@ -1475,6 +1612,9 @@ body {
   top: 100%;
   left: 0;
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background: white;
   padding: 0.5rem;
   border: 1px solid #e5e7eb;
@@ -1667,10 +1807,20 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  color: #e0e3eb;
-  font-size: 0.875rem;
+  color: #888b97;
+  font-size: 1rem;
   font-style: normal;
   line-height: 1.5rem;
+}
+.textarea::placeholder {
+  color: #888b97;
+}
+.textarea:focus, .textarea:not(:placeholder-shown) {
+  color: #888b97;
+  outline: none;
+}
+.textarea:focus {
+  border-color: #10b981;
 }
 
 .card-container {

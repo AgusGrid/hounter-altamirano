@@ -43,6 +43,7 @@ async function loadAllComponents() {
       container: 'featured-house-container',
     },
     { path: 'components/tour.html', container: 'tour-container' },
+    { path: 'components/form.html', container: 'form-container' },
     { path: 'components/suscribe.html', container: 'suscribe-container' },
     {
       path: 'components/find-more.html',
