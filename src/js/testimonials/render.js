@@ -114,10 +114,9 @@ function renderTestimonials(testimonials) {
   }
 
   setTimeout(() => {
-    if (window.TestimonialsSlider) {
-      window.TestimonialsSlider.initSlider();
-    }
-  }, 100);
+    if (window.TestimonialsSlider) window.TestimonialsSlider.initSlider();
+    else console.warn('TestimonialsSlider not available');
+  }, 200);
 }
 
 window.TestimonialsRender = {

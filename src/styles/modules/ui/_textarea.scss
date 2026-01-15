@@ -1,5 +1,5 @@
-@use "../../abstracts/variables" as *;
-@use "../../abstracts/mixins" as ui;
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as ui;
 
 /* =========================
   TEXTAREA
@@ -10,8 +10,22 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  color: $gray-100;
-  font-size: 0.875rem;
+  color: $gray-300;
+  font-size: 1rem;
   font-style: normal;
   line-height: 1.5rem;
+
+  &::placeholder {
+    color: $gray-300;
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    color: $gray-300;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: $primary;
+  }
 }

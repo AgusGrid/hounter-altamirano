@@ -37,6 +37,9 @@
     top: 100%;
     left: 0;
     width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     background: white;
     padding: 0.5rem;
     border: 1px solid #e5e7eb;
