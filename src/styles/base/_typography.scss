@@ -77,6 +77,11 @@ h4,
   user-select: text;
 }
 
+.body-text--light {
+  font-size: 1rem; // 16px
+  font-weight: $font-light;
+}
+
 .body-text--medium {
   font-size: 1rem; // 16px
   font-weight: $font-medium;
@@ -90,7 +95,7 @@ h4,
 /* =========================
    LABEL
 ========================= */
-.label {
+.label--regular {
   font-family: $font-primary;
   font-size: 0.875rem; // 14px
   font-weight: $font-regular;

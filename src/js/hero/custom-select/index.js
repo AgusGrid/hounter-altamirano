@@ -19,6 +19,8 @@ function initCustomSelect() {
     if (!select) return;
 
     const list = select.querySelector('.select-list');
+    if (!list) return;
+
     const valueEl = select.querySelector('.select-value, .value');
 
     if (!list) return;
