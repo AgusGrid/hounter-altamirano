@@ -845,6 +845,46 @@ body {
   margin: 0;
 }
 
+.footer {
+  position: relative;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  padding-left: calc(15% / 2);
+  padding-right: 10%;
+}
+.footer__background-1 {
+  position: absolute;
+  bottom: -2rem;
+  right: 1rem;
+  object-fit: cover;
+  z-index: 1;
+}
+.footer__background-2 {
+  position: absolute;
+  bottom: -2rem;
+  right: 0rem;
+  object-fit: cover;
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.footer__brand {
 .form {
 .suscribe {
 .testimonials {
@@ -1072,6 +1112,61 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.footer__brand-name {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1b1c57;
+}
+.footer__description {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #626687;
+  line-height: 1.6;
+  max-width: 20rem;
+}
+@media (max-width: 768px) {
+  .footer__description {
+    max-width: 100%;
+  }
+}
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #1b1c57;
+  transition: opacity 0.3s ease;
+}
+.footer__social-link:hover {
+  opacity: 0.8;
+}
+.footer__social-link img {
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: brightness(0) invert(1);
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.footer__title {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.125rem;
 
 .form-field {
   display: grid;
@@ -1204,6 +1299,69 @@ body {
   color: #1b1c57;
   margin: 0;
 }
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.footer__link {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #626687;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer__link:hover {
+  color: #1b1c57;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.footer__contact-item {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #626687;
+  margin: 0;
+  line-height: 1.6;
+}
+.footer__cookie-banner {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  width: 29.0625rem;
+  height: 3.5rem;
+  background-color: #d1fae5;
+  border-radius: 28px;
+  padding: 1rem 1rem 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+.footer__cookie-banner[aria-hidden=false] {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.footer__cookie-banner[aria-hidden=true] {
+  transform: translateX(-50%) translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.footer__cookie-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.footer__cookie-icon {
 .testimonials__agent-location {
   font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.875rem;
@@ -1221,6 +1379,37 @@ body {
   height: 1.5rem;
   flex-shrink: 0;
 }
+.footer__cookie-text {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0b9567;
+}
+.footer__cookie-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  margin-left: 1rem;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+.footer__cookie-close:hover {
+  opacity: 0.7;
+}
+.footer__cookie-close:active {
+  opacity: 0.5;
+}
+.footer__cookie-close img {
+  width: 1.25rem;
+  height: 1.25rem;
+  pointer-events: none;
 .testimonials__indicators {
   display: flex;
   justify-content: center;
