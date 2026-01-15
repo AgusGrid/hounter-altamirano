@@ -1,0 +1,122 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/mixins' as *;
+
+.suscribe {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: calc(#{$margin-left-global} / 2);
+  padding-right: $house-inner-padding;
+
+  &__container {
+    background: url('../../assets/images/suscribe/bg.png') no-repeat center
+      center / cover;
+    border-radius: 2rem;
+    // a rem
+    height: 19.5rem;
+    position: relative;
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &-img {
+      &--1 {
+        border: 2px solid $color-white;
+        position: absolute;
+        width: 6.5rem;
+        height: 6rem;
+        top: 2.375rem;
+        left: 4rem;
+        border-radius: 1.5rem;
+        border-width: 2px;
+      }
+
+      &--2,
+      &--3,
+      &--6,
+      &--7 {
+        position: absolute;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        border-width: 2px;
+      }
+
+      &--2 {
+        top: 4rem;
+        left: 17rem;
+      }
+
+      &--3 {
+        bottom: 4rem;
+        left: 5rem;
+      }
+
+      &--4,
+      &--8 {
+        position: absolute;
+        border: 2px solid $color-white;
+        border-width: 2px;
+        border-radius: 2rem;
+        width: 4.3rem;
+        height: 4.3rem;
+      }
+
+      &--4 {
+        bottom: 4rem;
+        left: 17rem;
+      }
+
+      &--5 {
+        position: absolute;
+        border: 2px solid $color-white;
+        right: 15rem;
+        top: 3rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2rem;
+        border-width: 2px;
+      }
+
+      &--6 {
+        bottom: 6rem;
+        right: 14rem;
+      }
+
+      &--7 {
+        top: 6rem;
+        right: 6rem;
+      }
+
+      &--8 {
+        bottom: 4rem;
+        right: 5rem;
+      }
+    }
+  }
+
+  &__search-bar {
+    max-width: 31rem;
+    gap: 1rem;
+    border-radius: 1.75rem;
+    border-width: 1px;
+    padding-top: 0.25rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .search-bar__icon.suscribe__search-bar-icon {
+    @include mask-icon('../../assets/icons/shapes/mail.svg');
+    background-color: $color-black;
+  }
+}
