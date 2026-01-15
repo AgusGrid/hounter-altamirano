@@ -214,6 +214,23 @@ h4,
   font-weight: 600;
 }
 
+.label--top {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #f59e0b;
+  position: relative;
+}
+.label--top::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 1px;
+  background-image: url("../../assets/images/rectangle.png");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -832,6 +849,183 @@ body {
   font-weight: 600;
   color: #1b1c57;
   margin: 0;
+}
+
+.testimonials {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: calc(15% / 2);
+  padding-right: 10%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .testimonials {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.testimonials__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+.testimonials__container-header-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.testimonials__container-content {
+  position: relative;
+  width: 60rem;
+  height: 32rem;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .testimonials__container-content {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
+.testimonials__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.testimonials__item--active {
+  opacity: 1;
+  visibility: visible;
+}
+.testimonials__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.testimonials__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonials__container-content-item {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45rem;
+}
+@media (max-width: 768px) {
+  .testimonials__container-content-item {
+    width: calc(100% - 2rem);
+    max-width: 45rem;
+  }
+}
+.testimonials__container-content-item {
+  background-color: #ffffff;
+  box-shadow: rgba(12, 21, 55, 0.09) 0px 8px 24px;
+  border-radius: 1rem;
+  padding: 2rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.testimonials__container-content-item-header {
+  margin-bottom: 0;
+}
+.testimonials__container-content-item-title {
+  color: #1b1c57;
+  margin: 0;
+}
+.testimonials__container-content-item-body {
+  margin-bottom: 0;
+}
+.testimonials__container-content-item-text {
+  color: #626687;
+  margin: 0;
+}
+.testimonials__container-content-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 0;
+}
+.testimonials__agent {
+  flex: 1;
+}
+.testimonials__agent-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.testimonials__agent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.testimonials__agent-name {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1b1c57;
+  margin: 0;
+}
+.testimonials__agent-location {
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #888b97;
+  margin: 0;
+}
+.testimonials__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.testimonials__rating-star {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+.testimonials__indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+.testimonials__indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #888b97;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.testimonials__indicator:hover {
+  background-color: #888b97;
+  transform: scale(1.2);
+}
+.testimonials__indicator--active {
+  background-color: #1b1c57;
+  transform: scale(1.2);
 }
 
 /* =========================
