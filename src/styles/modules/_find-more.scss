@@ -6,6 +6,23 @@
   padding-bottom: 5rem;
   padding-left: calc(#{$margin-left-global} / 2);
   padding-right: $house-inner-padding;
+  position: relative;
+
+  &__background-1 {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    z-index: -100;
+    object-fit: cover;
+  }
+
+  &__background-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    object-fit: cover;
+  }
 
   &__container {
     width: 100%;
@@ -80,10 +97,16 @@
         }
 
         &-image {
+          width: 15rem;
+          height: 13rem;
+          flex-shrink: 0;
+          overflow: hidden;
+          border-radius: 1rem;
+
           img {
             width: 100%;
             height: 100%;
-
+            object-fit: cover;
             border-radius: 1rem;
           }
         }
@@ -104,10 +127,15 @@
         }
 
         &-image {
+          width: 100%;
+          height: fit-content;
+          overflow: hidden;
+          border-radius: 1rem;
+
           img {
             width: 100%;
             height: 100%;
-
+            object-fit: cover;
             border-radius: 1rem;
           }
         }

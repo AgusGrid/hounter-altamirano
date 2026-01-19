@@ -1,4 +1,6 @@
 let findMoreData = null;
+let isShowingMoreArticles = false;
+let originalData = null;
 
 /**
  * Loads find more articles from JSON file
@@ -32,6 +34,7 @@ function getFindMoreData() {
  */
 function setFindMoreData(data) {
   findMoreData = data;
+  originalData = JSON.parse(JSON.stringify(data)); // Deep copy for original data
 }
 
 /**
@@ -58,9 +61,49 @@ function moveItemToRight(itemId) {
   return item;
 }
 
+/**
+ * Toggles between original articles and more articles
+ * @returns {Object|null} Current data object or null
+ */
+function toggleMoreArticles() {
+  if (!findMoreData || !originalData) {
+    return null;
+  }
+
+  if (isShowingMoreArticles) {
+    // Switch back to original articles
+    findMoreData.leftItems = JSON.parse(JSON.stringify(originalData.leftItems));
+    findMoreData.rightItem = JSON.parse(JSON.stringify(originalData.rightItem));
+    isShowingMoreArticles = false;
+  } else {
+    // Switch to more articles
+    if (originalData.moreArticles) {
+      findMoreData.leftItems = JSON.parse(
+        JSON.stringify(originalData.moreArticles.leftItems)
+      );
+      findMoreData.rightItem = JSON.parse(
+        JSON.stringify(originalData.moreArticles.rightItem)
+      );
+      isShowingMoreArticles = true;
+    }
+  }
+
+  return findMoreData;
+}
+
+/**
+ * Gets current state of articles (original or more)
+ * @returns {boolean} True if showing more articles, false if showing original
+ */
+function getIsShowingMoreArticles() {
+  return isShowingMoreArticles;
+}
+
 window.FindMoreData = {
   loadFindMoreData,
   getFindMoreData,
   setFindMoreData,
   moveItemToRight,
+  toggleMoreArticles,
+  getIsShowingMoreArticles,
 };

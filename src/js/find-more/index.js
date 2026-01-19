@@ -48,6 +48,29 @@ function setupTitleClickHandlers() {
   });
 }
 
+/**
+ * Sets up click handler for the "More Articles" button
+ */
+function setupMoreArticlesButton() {
+  const moreArticlesButton = document.querySelector(
+    '.find-more__container-header-button'
+  );
+
+  if (!moreArticlesButton) return;
+
+  moreArticlesButton.addEventListener('click', () => {
+    if (!window.FindMoreData || !window.FindMoreRender) return;
+
+    const updatedData = window.FindMoreData.toggleMoreArticles();
+
+    if (updatedData) {
+      window.FindMoreRender.renderFindMoreItems(updatedData);
+      setupTitleClickHandlers();
+    }
+  });
+}
+
 document.addEventListener('componentsLoaded', async () => {
   await initFindMore();
+  setupMoreArticlesButton();
 });
