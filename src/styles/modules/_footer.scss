@@ -1,0 +1,236 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoints' as *;
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  padding-left: calc(#{$margin-left-global} / 2);
+  padding-right: $house-inner-padding;
+
+  &__background {
+    &-1 {
+      position: absolute;
+      bottom: -2rem;
+      right: 1rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    &-2 {
+      position: absolute;
+      bottom: -2rem;
+      right: 0rem;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(lg, down) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    @include breakpoint(md, down) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__brand-name {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    font-weight: $font-bold;
+    color: $color-black;
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: $font-regular;
+    color: $gray-500;
+    line-height: 1.6;
+    max-width: 20rem;
+
+    @include breakpoint(md, down) {
+      max-width: 100%;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: $color-black;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: 1.125rem;
+    font-weight: $font-semibold;
+    color: $color-black;
+    margin: 0;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  &__link {
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: $font-regular;
+    color: $gray-500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  &__contact-item {
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: $font-regular;
+    color: $gray-500;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  &__cookie-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 29.0625rem;
+    height: 3.5rem;
+    background-color: $primary-light;
+    border-radius: 28px;
+    padding: 1rem 1rem 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    transition:
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.4s ease;
+
+    &[aria-hidden='false'] {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &[aria-hidden='true'] {
+      transform: translateX(-50%) translateY(100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__cookie-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__cookie-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  &__cookie-text {
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: $font-medium;
+    color: $primary-dark;
+  }
+
+  &__cookie-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    margin-left: 1rem;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1001;
+    flex-shrink: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "leftItems": [
+    {
+      "id": 1,
+      "image": "./assets/images/find-more/f1.jpg",
+      "author": {
+        "avatar": "./assets/images/avatar/av3.jpg",
+        "name": "Dianne Russell"
+      },
+      "title": "The things we need to check when we want to buy a house",
+      "content": "When buying a house, there are several important things to check. First, inspect the structural integrity and review the property's history. Also assess the neighborhood and verify all legal documents.",
+      "readTime": "4 min read",
+      "date": "25 Apr 2021"
+    },
+    {
+      "id": 2,
+      "image": "./assets/images/find-more/f2.jpg",
+      "author": {
+        "avatar": "./assets/images/avatar/av9.jpg",
+        "name": "Courtney Henry"
+      },
+      "title": "7 Ways to distinguish the quality of the house we want to buy",
+      "content": "To evaluate house quality, check the foundation, examine the roof condition, and inspect plumbing and electrical systems. Also assess the materials used and review the property's maintenance history.",
+      "readTime": "6 min read",
+      "date": "24 Apr 2021"
+    },
+    {
+      "id": 3,
+      "image": "./assets/images/find-more/f3.jpg",
+      "author": {
+        "avatar": "./assets/images/avatar/av10.jpg",
+        "name": "Darlene Robertson"
+      },
+      "title": "The best way to know the quality of the house we want to buy",
+      "content": "The best way to determine house quality is through a professional home inspection. Research the builder's reputation, check building codes compliance, and compare the property with similar homes in the area.",
+      "readTime": "2 min read",
+      "date": "24 Apr 2021"
+    }
+  ],
+  "rightItem": {
+    "id": 4,
+    "image": "./assets/images/avatar/av4.png",
+    "author": {
+      "avatar": "./assets/images/avatar/av11.jpg",
+      "name": "Cameron Williamson"
+    },
+    "title": "12 Things to know before buying a house",
+    "content": "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
+    "readTime": "8 min read",
+    "date": "25 Apr 2021"
+  },
+  "moreArticles": {
+    "leftItems": [
+      {
+        "id": 5,
+        "image": "./assets/images/find-more/f4.jpeg",
+        "author": {
+          "avatar": "./assets/images/avatar/av1.jpg",
+          "name": "Sarah Johnson"
+        },
+        "title": "Essential financial planning tips for first-time home buyers",
+        "content": "Financial planning is crucial when buying your first home. Start by assessing your credit score, calculate your budget carefully, and save for a substantial down payment. Also consider closing costs and ongoing maintenance expenses.",
+        "readTime": "5 min read",
+        "date": "23 Apr 2021"
+      },
+      {
+        "id": 6,
+        "image": "./assets/images/find-more/f5.jpeg",
+        "author": {
+          "avatar": "./assets/images/avatar/av2.jpg",
+          "name": "Michael Chen"
+        },
+        "title": "Understanding mortgage options and interest rates explained",
+        "content": "Choosing the right mortgage requires understanding different loan types and interest rate structures. Compare fixed and adjustable rates, evaluate loan terms carefully, and consider your long-term financial goals before making a decision.",
+        "readTime": "7 min read",
+        "date": "22 Apr 2021"
+      },
+      {
+        "id": 7,
+        "image": "./assets/images/find-more/f6.jpeg",
+        "author": {
+          "avatar": "./assets/images/avatar/av5.jpg",
+          "name": "Emily Rodriguez"
+        },
+        "title": "Home inspection checklist: what professionals look for",
+        "content": "Professional home inspections cover multiple critical areas of a property. Inspectors examine structural elements, check electrical and plumbing systems, assess HVAC functionality, and identify potential safety hazards throughout the home.",
+        "readTime": "4 min read",
+        "date": "21 Apr 2021"
+      }
+    ],
+    "rightItem": {
+      "id": 8,
+      "image": "./assets/images/find-more/f7.jpeg",
+      "author": {
+        "avatar": "./assets/images/avatar/av6.jpg",
+        "name": "Dianne Russell"
+      },
+      "title": "Complete guide to negotiating the best home purchase price",
+      "content": "Negotiating a home purchase requires strategy and market knowledge. Research comparable sales in the area, identify property issues that can lower the price, and work with an experienced real estate agent to secure the best deal possible.",
+      "readTime": "6 min read",
+      "date": "20 Apr 2021"
+    }
+  }
+}

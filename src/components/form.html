@@ -1,0 +1,107 @@
+<section class="form">
+  <div class="form-container">
+    <div class="form-container__left">
+      <h3 class="heading-3 form-container__left-title">
+        Would You Like To Join?
+      </h3>
+      <p class="body-text form-container__left-description">
+        Quickly get three quotes from these local that people love in online
+        reviews.
+      </p>
+      <div class="form-container__left-separator"></div>
+      <p class="body-text form-container__left-description">
+        Pick the whose estimate suits you best.
+      </p>
+      <div class="form-container__left-separator"></div>
+      <p class="body-text form-container__left-description">
+        We then make sure the work i done to your complete satisfaction.
+      </p>
+      <img
+        src="./assets/images/form/form-left-img.png"
+        alt="Form left image"
+        class="form-container__left-img"
+      />
+    </div>
+    <div class="form-container__right">
+      <form class="form-container__right-form">
+        <div class="form-field">
+          <label for="name" class="form-field__label">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input form-field__input"
+            placeholder="Your name"
+          />
+        </div>
+        <div class="form-field">
+          <label for="surname" class="form-field__label">Surname</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            class="input form-field__input"
+            placeholder="Your Surname"
+          />
+        </div>
+        <div class="form-field">
+          <label for="education" class="form-field__label">Education</label>
+          <div class="custom-select form-field__select">
+            <button
+              class="select-trigger"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="select-value">Select One</span>
+              <span class="chevron" aria-hidden="true">
+                <img src="./assets/icons/chevron-down.svg" alt="Chevron down" />
+              </span>
+            </button>
+            <ul class="select-list" role="listbox" aria-label="Education">
+              <li role="option">High School</li>
+              <li role="option">Bachelor's Degree</li>
+              <li role="option">Master's Degree</li>
+              <li role="option">PhD</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message" class="form-field__label">Message</label>
+          <div class="form-field__textarea-wrapper">
+            <textarea
+              id="message"
+              name="message"
+              class="textarea form-field__textarea"
+              placeholder="Message"
+              maxlength="500"
+            ></textarea>
+            <span class="form-field__char-count">0/500</span>
+          </div>
+        </div>
+        <div class="form-field form-field--checkbox">
+          <label class="custom-checkbox">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              class="custom-checkbox__input"
+            />
+            <span class="custom-checkbox__box"></span>
+            <span class="custom-checkbox__label-text">
+              I give consent to the processing of my personal data given in
+              the<br />
+              contact form above under the terms and conditions of Grid<br />
+              Dynamics Privacy Policy.
+            </span>
+          </label>
+        </div>
+        <div class="form-field form-field--submit">
+          <button type="submit" class="btn btn--filled btn--base">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
